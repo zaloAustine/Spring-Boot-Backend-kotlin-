@@ -23,4 +23,5 @@ class TopicService {
         this?.description = topic.description
         this?.name = topic.name
     }
+    fun deleteTopic(id: String) = topics.removeIf{it.id == id}
 }

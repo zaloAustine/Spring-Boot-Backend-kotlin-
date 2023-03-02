@@ -20,4 +20,7 @@ class TopicController {
 
     @RequestMapping(method = [RequestMethod.PUT], value = ["/topics/{id}"])
     fun updateTopic(@PathVariable id: String,@RequestBody topic: Topic) = topicService.updateTopic(id,topic)
+
+    @RequestMapping(method = [RequestMethod.DELETE], value = ["/topics/{id}"])
+    fun deleteTopic(@PathVariable id: String) = topicService.deleteTopic(id)
 }
